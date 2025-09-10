@@ -5,28 +5,32 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "My Store",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    getImageSrc: () => require("../images/photo1.jpg"),
+      "A full-stack e-commerce application built with the MERN stack (MongoDB, Express.js, React, Node.js).",
+    getImageSrc: () => require("../images/my-store.png"),
+    url: "https://my-store.carolinedev.work/",
   },
   {
-    title: "React Infinite Scroll",
+    title: "Selective Practice",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      "A project designed to help users practice challenging questions from Scholarly trial tests. 🔥️",
+    getImageSrc: () => require("../images/selective-practice.png"),
+    url: "https://selective-practice.carolinedev.work/",
   },
   {
-    title: "Photo Gallery",
+    title: "Serverless CDK Project",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
+      "This project creates a complete serverless architecture using AWS CDK with Python.",
+    getImageSrc: () => require("../images/serverless.png"),
+    url: "https://github.com/carolinefzhang/serverless-cdk-project",
   },
   {
-    title: "Event planner",
+    title: "UI Components",
     description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "A few React applications that I built to practice and improve my React skills.",
+    getImageSrc: () => require("../images/ui-components.png"),
+    url: "https://ui-components.carolinedev.work/",
   },
 ];
 
@@ -44,7 +48,7 @@ const ProjectsSection = () => {
       </Heading>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
+        gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))" }}
         gridGap={8}
       >
         {projects.map((project) => (
@@ -53,6 +57,7 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            url={project.url}
           />
         ))}
       </Box>
