@@ -32,6 +32,13 @@ const projects = [
     getImageSrc: () => require("../images/ui-components.png"),
     url: "https://ui-components.carolinedev.work/",
   },
+  {
+    title: "Vanlife",
+    description:
+      "A van rental platform built with React frontend and Django REST API backend.",
+    getImageSrc: () => require("../images/vanlife.png"),
+    url: "https://vanlife.carolinedev.work/",
+  },
 ];
 
 const ProjectsSection = () => {
