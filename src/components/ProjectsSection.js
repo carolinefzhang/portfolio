@@ -39,6 +39,13 @@ const projects = [
     getImageSrc: () => require("../images/vanlife.png"),
     url: "https://vanlife.carolinedev.work/",
   },
+  {
+    title: "Blog",
+    description:
+      "A full-stack blog application built with React, GraphQL, and MongoDB.",
+    getImageSrc: () => require("../images/blog.png"),
+    url: "https://blog.carolinedev.work/",
+  },
 ];
 
 const ProjectsSection = () => {

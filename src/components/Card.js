@@ -5,8 +5,8 @@ import React from "react";
 
 const Card = ({ title, description, imageSrc, url }) => {
   return (
-    <VStack bg="white" spacing={4} borderRadius="lg" color="black" overflow="hidden" alignItems="flex-start">
-      <a href={url} target="_blank"><Image src={imageSrc} borderRadius="lg"/></a>
+    <VStack bg="white" borderRadius="lg" color="black" overflow="hidden" alignItems="flex-start" justifyContent="space-between" height="100%"  >
+      <a href={url} target="_blank"><Image src={imageSrc} borderRadius="lg" border={"none"} /></a>
       <VStack p={4} spacing={2} alignItems="flex-start">
         <Heading as="h3" size="md">{title}</Heading>
         <Text color="gray.600" fontSize="sm">{description}</Text>
